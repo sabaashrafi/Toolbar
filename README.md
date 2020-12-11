@@ -17,7 +17,7 @@ $ npm run start
 $ npm run generate
 # for see documents install vuese 
 $ npm -g install @vuese/cli
-
+# run document as a website
 $ vuese serve --open
 ```
 
