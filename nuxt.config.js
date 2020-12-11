@@ -17,8 +17,7 @@ export default {
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
-  ],
+  plugins: [  { src: '@/plugins/external.ts', mode: 'client' }],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -35,8 +34,36 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // https://i18n.nuxtjs.org/
+    'nuxt-i18n'
+     
   ],
-
+  i18n: {
+    lazy: true,
+    langDir: 'locales/',
+    locales: [
+       {
+        name: 'English',
+        code: 'en',
+        iso: 'en',
+        file: 'en'
+      },
+      {
+        name: 'Farsi',
+        code: 'fa',
+        iso: 'fa',
+        file: 'fa'
+      },
+   ],
+    defaultLocale: 'en',
+  },
+  //config for bootstrapt vue
+  bootstrapVue: {
+    // Install the `IconsPlugin` plugin (in addition to `BootstrapVue` plugin)
+    icons: true
+  },
+  
+    
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
